@@ -38,6 +38,9 @@ jobs:
           echo "BUILD_NAME_WITH_LATEST : BUILD_NAME_WITH_LATEST"
           docker push $BUILD_NAME_WITH_LATEST
 
+      - name: Authenticate with Google Cloud
+        run: gcloud auth login
+
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v1
