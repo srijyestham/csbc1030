@@ -41,10 +41,10 @@ jobs:
       - name: Authenticate with Google Cloud
         # run: gcloud auth login
         uses: google-github-actions/setup-gcloud@v0
-          with:
-            project_id: ${{ env.PROJECT_ID }}
-            service_account_key: 4/0AfJohXkmWGA7-r7jkMv4WbVywIopkBbEml_8YwggI0ZOZ5Bh_wGn4lTysg4xxpJOVNiNuA
-            export_default_credentials: true
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+          service_account_key: 4/0AfJohXkmWGA7-r7jkMv4WbVywIopkBbEml_8YwggI0ZOZ5Bh_wGn4lTysg4xxpJOVNiNuA
+          export_default_credentials: true
 
 
       - name: Deploy to Cloud Run
