@@ -47,7 +47,7 @@ jobs:
           # NOTE: If required, update to the appropriate source folder
           # source: ./
           image: ${{ env.IMAGE_NAME }}:${{ env.VERSION_NUMBER }}
-          project: ${{ env.PROJECT_ID}}
+          project_id: ${{ env.PROJECT_ID}}
 
         # If required, use the Cloud Run url output in later steps
       - name: Show Output
