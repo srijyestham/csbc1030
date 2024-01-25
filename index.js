@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
-const port = process.env.port || 3000;
+const port = process.env.port || 8080;
 const authRoute = require("./routes/auth.js");
 const userRoutes = require("./routes/users.js");
 const someMiddleware = require("./middleware/middlewares.js");
