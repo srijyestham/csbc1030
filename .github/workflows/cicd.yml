@@ -39,7 +39,7 @@ jobs:
           docker push $BUILD_NAME_WITH_LATEST
 
       - name: Authenticate with Google Cloud
-#        run: gcloud auth login
+        # run: gcloud auth login
         uses: google-github-actions/setup-gcloud@v0
           with:
             project_id: ${{ env.PROJECT_ID }}
