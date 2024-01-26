@@ -1,4 +1,27 @@
-                        Instructions to run program
+
+		#OUR STEPS
+
+  1. We forked repositry from SriJyestham/csbc1030 for the app source code. ( Manjinder Singh's Repositry )
+  2. Yashdeep Tehlan ran the project in his local system.
+  3. Aditya Kuchal checked for bugs.
+  4. All four of us planned the next steps. Chandrashekar's input was most prominent.
+  5. We setup the GCP Run instance.
+  6. We setup the workflow file in git actions.
+  7. We setup the docker image
+  8. We tried deploying using cloudsql ( Mysql Instance ) but coud not get it running.
+  9. Chandrashekar suggested using mysql at the AVIEN database cloud.
+  10. We completed its congfiguration by setting up the ip and dns.
+  11. We tested the deployment by git actions.
+  12. Resolved errors in yaml file, everyone searched for the answers on stackeroverflow like sites.
+  13. Tried building and deploying, was succesfull.
+  14. Tested the app in postman. ( https://rap-liqchmzala-uk.a.run.app/ )
+  15. Checked the settings and files again.
+  16. Commited and Merged the changes to SriJyestham/csbc1030/final_project
+  17. Most of the steps were completed together not individually so can not comment single name for a steps.
+      
+   
+   
+   			Instructions to run program
 
     In Bash :
                 1. cd csbc1030/assignment_08
@@ -43,5 +66,14 @@
 						"password": "1234"
 						}
 
-				13. 
-		
+				13. Open the following url in browser to test the Cloud Instance of the app in postman
+    				    and use the links similar to above steps to test out the application.
+    						https://rap-liqchmzala-uk.a.run.app/
+
+    ## Instructions
+
+1. Create a containerized version of the Node application developed in the final project for CSBC-1030
+2. Deploy the container to Cloud Run
+3. Deploy a managed database and connect it to the deployed container
+4. create a CI/CD workflow to automatically test and lint on every Pull Request
+5. create a CI/CD workflow to automatically deploy new versions of the application on every merge to develop.
