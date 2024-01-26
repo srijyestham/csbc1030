@@ -38,16 +38,21 @@ jobs:
           echo "BUILD_NAME_WITH_LATEST : BUILD_NAME_WITH_LATEST"
           docker push $BUILD_NAME_WITH_LATEST
 
-      - name: Authenticate with Google Cloud
-        id: 'auth'
+#      - name: Authenticate with Google Cloud
+#        id: 'auth'
+#        uses: 'google-github-actions/auth@v2'
+#        with:
+#          workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+#          service_account: '623988896046-compute@developer.gserviceaccount.com'
+#
+#      - name: 'Set up Cloud SDK'
+#        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: Activate Service Account
         uses: 'google-github-actions/auth@v2'
         with:
-          workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-          service_account: '623988896046-compute@developer.gserviceaccount.com'
-
-      - name: 'Set up Cloud SDK'
-        uses: 'google-github-actions/setup-gcloud@v2'
-
+          project_id: ${{ env.PROJECT_ID }}
+        run: gcloud auth activate-service-account --key-file=key.json
 
       - name: Deploy to Cloud Run
         id: deploy
