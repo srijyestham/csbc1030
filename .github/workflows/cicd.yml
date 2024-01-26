@@ -49,9 +49,9 @@ jobs:
 #        uses: 'google-github-actions/setup-gcloud@v2'
 
       - name: Activate Service Account
-        uses: 'google-github-actions/auth@v2'
-        with:
-          project_id: ${{ env.PROJECT_ID }}
+#        uses: 'google-github-actions/auth@v2'
+#        with:
+#          project_id: ${{ env.PROJECT_ID }}
         run: gcloud auth activate-service-account --key-file=key.json
 
       - name: Deploy to Cloud Run
