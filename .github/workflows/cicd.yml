@@ -66,7 +66,7 @@ jobs:
           project_id: ${{ env.PROJECT_ID}}
 
       - name: Configure Authentication (allow unauthenticated)
-        run: gcloud run services add-iam-policy-binding ${{ env.SERVICE }} --member="allUsers" --role="roles/run.invoker" --project=${{ env.PROJECT_ID}} --region=${{ env.REGION }} --project_id=${{ env.PROJECT_ID}} --service=${{ env.SERVICE }}
+        run: gcloud run services add-iam-policy-binding ${{ env.SERVICE }} --member="allUsers" --role="roles/run.invoker" --project=${{ env.PROJECT_ID}} --region=${{ env.REGION }}
 
         # If required, use the Cloud Run url output in later steps
       - name: Show Output
