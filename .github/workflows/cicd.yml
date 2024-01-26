@@ -65,6 +65,9 @@ jobs:
           image: ${{ env.IMAGE_NAME }}:${{ env.VERSION_NUMBER }}
           project_id: ${{ env.PROJECT_ID}}
 
+      - name: Configure Authentication (allow unauthenticated)
+          run: gcloud run services update ${{ env.SERVICE }} --update-allow-unauthenticated
+
         # If required, use the Cloud Run url output in later steps
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
